@@ -1,57 +1,46 @@
-Diabetes Disease Progression Prediction
-This project builds regression models to predict diabetes progression using clinical features like BMI, blood pressure, and serum measurements. It emphasizes model performance, interpretability, and robustness using SHAP, cross-validation, and permutation importance.
+🩺 Diabetes Disease Progression Prediction using Regression and SHAP
+This project predicts diabetes progression using regression models and explains clinical feature impact with SHAP. It provides a transparent, interpretable, and reproducible machine learning pipeline for healthcare risk prediction.
 
-Dataset
-Source: sklearn.datasets.load_diabetes()
+🚀 Project Highlights
+📊 Trained Linear, Ridge, and XGBoost regression models
 
-442 patient records
+📈 Achieved R² ≈ 0.45 using clinical indicators like BMI and blood sugar
 
-10 physiological features (e.g., age, BMI, BP, serum markers)
+🔍 Applied SHAP and Permutation Importance for model interpretability
 
-Target: Disease progression after one year
+➕ Included Polynomial Feature Engineering (degree=2)
 
-Methods Used
-Linear Regression
+✅ Validated performance using 5-fold Cross-Validation
 
-Ridge Regression
+🧪 Methodology
+1. Data Preparation
+Loaded the diabetes dataset from sklearn.datasets
 
-XGBoost Regressor
+Standardized features using StandardScaler
 
-Polynomial Feature Engineering (degree=2)
+Created non-linear interaction terms using PolynomialFeatures
 
-Cross-Validation (5-fold)
+2. Model Training
+Trained and compared: LinearRegression, Ridge, and XGBRegressor
 
-SHAP for feature impact
+Evaluated using: MSE, RMSE, MAE, and R² Score
 
-Permutation Feature Importance
+Validated results with cross-validation
 
-Evaluation Metrics
-Models were evaluated using:
+3. Model Interpretability
+Used SHAP Summary Plots to explain model predictions
 
-Mean Squared Error (MSE)
+Added Permutation Feature Importance to validate key predictors
 
-Root Mean Squared Error (RMSE)
-
-Mean Absolute Error (MAE)
-
-R² Score
-
+📊 Results
 Model	MSE	RMSE	MAE	R² Score
 Linear Regression	~2892	~53.78	~43.83	~0.45
 Ridge Regression	~2892	~53.78	~43.83	~0.45
 XGBoost Regressor	~3351	~57.89	~46.70	~0.37
-Interpretability
-SHAP Summary Plots show the global impact of features on predictions
 
-Permutation Importance validates feature relevance across models
 
-Key Findings
-BMI and s5 (blood sugar) are the most important predictors
-
-Linear and Ridge models outperform XGBoost on this dataset
-
-Model generalizes well with 5-fold cross-validation (R² ~0.45)
-
-Install dependencies:
-
-pip install shap xgboost scikit-learn matplotlib seaborn
+📂 Folder Structure
+diabetes-progression-prediction/
+├── README.md
+├── requirements.txt
+├── Diabetes Disease predcition.ipynb
