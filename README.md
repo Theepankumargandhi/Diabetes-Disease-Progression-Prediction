@@ -76,7 +76,3 @@ jupyter notebook Diabetes\ Disease\ predcition.ipynb
 
 ---
 
-## ✍️ Author
-
-Developed as part of a healthcare data science portfolio project.  
-For questions or collaboration, feel free to connect!
